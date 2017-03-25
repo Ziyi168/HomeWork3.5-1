@@ -2,31 +2,37 @@ import javax.swing.JOptionPane;
 public class Role {
 public static void main(String[]args){
 	
-	   int role;
-	   String strRole = null;
-	   role = Integer.parseInt(JOptionPane.showInputDialog(null,"Enter the role here"));
+	  String role ;
+	  int count = 0;
+		  
+       do{	   
+	  
+					   String strRole = null;
+					   role = JOptionPane.showInputDialog(null,"Enter the role here");
+					   
 	   
-				   switch (role){
-				 
-				   case 1:
-					   strRole = "Administration";
-					   break;
-				   case 2:
-					   strRole = "Faculty";
-					   break;
-				   case 3:
-					   strRole = "Staff";
-					   break;   
-				   case 4:
-					   strRole = "Student";
-					   break;
-				   case 5:
-					   strRole = "Guest";
-					   break; 
-		   
-	   }
-	   
-	   JOptionPane.showMessageDialog(null,"Welcom, "+ strRole );  
-	   
+					   switch(role){
+					    case "Administration":
+					    	strRole = "Administration";
+					    	break;
+					    case "Faculty":
+					    	strRole = "Faculty";
+					    	break;
+					    case "Staff":
+					    	strRole = "Staff";
+					    	break;
+					    case "Student":
+					    	strRole = "Student";
+					    	break;
+					    case "Guest":
+					    	strRole = "Guest";
+					    	break;
+					   
+					   }
+					   count +=1;
+					   JOptionPane.showMessageDialog(null,"Welcom, "+ strRole+"." );  
+					   count +=1;
+
+      }while (count<3);
    }
 }
